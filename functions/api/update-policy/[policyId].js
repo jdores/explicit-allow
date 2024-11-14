@@ -10,6 +10,7 @@ export async function onRequestPost({ params, env }) {
   
   const enableAccess = "not(identity.email == \"miguel@jdores.xyz\")";
   const disableAccess = "";
+  var newIdentity = "";
 
   console.log(policyId);
   if (policyId == 1){
