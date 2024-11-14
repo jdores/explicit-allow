@@ -13,7 +13,6 @@ export async function onRequestPost({ params, env }) {
   const disableAccess = "";
   var newIdentity = "";
 
-
   console.log(policyId);
   if (policyId == 1){
     newIdentity = enableAccess;
