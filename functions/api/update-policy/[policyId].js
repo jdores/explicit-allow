@@ -65,6 +65,7 @@ export async function onRequestPost({ params, env }) {
     });
 
     const result = await response.json();
+    console.log(result);
 
     console.log(response.status)
     if (response.ok) {
