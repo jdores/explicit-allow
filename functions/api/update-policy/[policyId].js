@@ -29,7 +29,7 @@ export async function onRequestPost({ params, env }) {
     enabled: true,
     action: "block",
     filters: ["l4"],
-    traffic: "net.dst.ip == 10.132.0.2",
+    traffic: "net.dst.ip == 10.156.15.233",
     identity: `${newIdentity}`,
     device_posture: "",
     version: 1,
