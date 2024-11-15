@@ -24,7 +24,7 @@ export async function onRequestPost({ params, env }) {
   const policyUpdate = {
     name: "Technician access - explicit allow",
     description: "Updated by Cloudflare Pages",
-    precedence: 5,
+    precedence: 20,
     enabled: true,
     action: "block",
     filters: ["l4"],
