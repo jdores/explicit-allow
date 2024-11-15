@@ -7,7 +7,6 @@ export async function onRequestPost({ params, env }) {
   const userEmail = env.USER_EMAIL;
   const apiKey = env.API_KEY;
   const networkPolicyApi = `https://api.cloudflare.com/client/v4/accounts/${accountId}/gateway/rules/${ruleId}`;
-  //const networkPolicyApi = `https://api.cloudflare.com/client/v4/accounts/36ddb61117ace3ebf47bbc1e91502a71/gateway/rules/ec2e2647-b5ff-4e14-b636-64247b93c35c`;
   
   const enableAccess = "not(identity.email == \"miguel@jdores.xyz\")";
   const disableAccess = "";
