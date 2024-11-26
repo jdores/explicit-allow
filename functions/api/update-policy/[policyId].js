@@ -8,10 +8,9 @@ export async function onRequestPost({ params, env , request}) {
   const apiKey = env.API_KEY;
   const networkPolicyApi = `https://api.cloudflare.com/client/v4/accounts/${accountId}/gateway/rules/${ruleId}`;
   
-  /// Code to get the identity of the request (below)
+  // Get the identity of the user making the request
   const technicianEmail = request.headers.get("cf-access-authenticated-user-email");
-  console.log(technicianEmail);
-  /// Code to get the identity of the request (above)
+  //console.log(technicianEmail);
 
   console.log(policyId);
   if (policyId == 1){
@@ -20,7 +19,7 @@ export async function onRequestPost({ params, env , request}) {
   if (policyId == 2){
     const newIdentity = "";
   }
-  console.log(newIdentity);
+  //console.log(newIdentity);
 
   const policyUpdate = {
     name: "Technician access - explicit allow",
