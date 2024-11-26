@@ -12,12 +12,13 @@ export async function onRequestPost({ params, env , request}) {
   const technicianEmail = request.headers.get("cf-access-authenticated-user-email");
   //console.log(technicianEmail);
 
+  var newIdentity;
   console.log(policyId);
   if (policyId == 1){
-    const newIdentity = `not(identity.email == \"${technicianEmail}\")`;
+    newIdentity = `not(identity.email == \"${technicianEmail}\")`;
   }
   if (policyId == 2){
-    const newIdentity = "";
+    newIdentity = "";
   }
   //console.log(newIdentity);
 
