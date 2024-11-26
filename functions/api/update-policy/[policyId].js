@@ -8,24 +8,17 @@ export async function onRequestPost({ params, env , request}) {
   const apiKey = env.API_KEY;
   const networkPolicyApi = `https://api.cloudflare.com/client/v4/accounts/${accountId}/gateway/rules/${ruleId}`;
   
-  const enableAccess = "not(identity.email == \"miguel@jdores.xyz\")";
-  const disableAccess = "";
-  var newIdentity = "";
-
-  console.log(request);
-  const technicianEmail = request.headers.get("cf-access-authenticated-user-email");
   /// Code to get the identity of the request (below)
-
+  const technicianEmail = request.headers.get("cf-access-authenticated-user-email");
   console.log(technicianEmail);
-
   /// Code to get the identity of the request (above)
 
   console.log(policyId);
   if (policyId == 1){
-    newIdentity = enableAccess;
+    const newIdentity = `not(identity.email == \"${technicianEmail}\")`;
   }
   if (policyId == 2){
-    newIdentity = disableAccess;
+    const newIdentity = "";
   }
   console.log(newIdentity);
 
