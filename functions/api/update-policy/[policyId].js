@@ -13,10 +13,10 @@ export async function onRequestPost({ params, env , request}) {
   var newIdentity = "";
 
   console.log(request);
-  //const technicianEmail = env.request.headers.get("cf-access-authenticated-user-email")
+  const technicianEmail = request.headers.get("cf-access-authenticated-user-email");
   /// Code to get the identity of the request (below)
 
-  //console.log(technicianEmail);
+  console.log(technicianEmail);
 
   /// Code to get the identity of the request (above)
 
