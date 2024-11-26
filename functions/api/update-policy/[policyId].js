@@ -17,7 +17,7 @@ export async function onRequestPost({ params, env }) {
   const { request } = env;
 
   const identityResponse = await fetch(
-    "https://example.com/cdn-cgi/access/can/identity", // Replace with your Pages URL
+    "https://explicitallow.jdores.xyz/cdn-cgi/access/can/identity", // Replace with your Pages URL
     {
       headers: {
         "CF-Access-Client-ID": request.headers.get("CF-Access-Client-ID"),
