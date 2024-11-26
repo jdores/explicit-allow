@@ -15,7 +15,7 @@ export async function onRequestPost({ params, env }) {
   const userEmail = env.request.headers.get("cf-access-authenticated-user-email")
   /// Code to get the identity of the request (below)
 
-  console.log(userEmai);
+  console.log(userEmail);
 
   /// Code to get the identity of the request (above)
 
