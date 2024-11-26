@@ -1,4 +1,4 @@
-export async function onRequestPost({ params, env }) {
+export async function onRequestPost({ params, env, event }) {
   const { policyId } = params;
   // Replace with your Cloudflare account details
 
