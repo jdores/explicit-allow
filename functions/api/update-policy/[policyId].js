@@ -1,4 +1,4 @@
-export async function onRequestPost({ params, env }) {
+export async function onRequestPost({ params, env ,context  }) {
   const { policyId } = params;
   // Replace with your Cloudflare account details
 
@@ -12,7 +12,7 @@ export async function onRequestPost({ params, env }) {
   const disableAccess = "";
   var newIdentity = "";
 
-  console.log(env.request);
+  console.log(context);
   //const technicianEmail = env.request.headers.get("cf-access-authenticated-user-email")
   /// Code to get the identity of the request (below)
 
