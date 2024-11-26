@@ -14,28 +14,8 @@ export async function onRequestPost({ params, env }) {
 
   /// Code to get the identity of the request (below)
 
-  const { request } = env;
+  console.log(env);
 
-  const identityResponse = await fetch(
-    "https://explicitallow.jdores.xyz/cdn-cgi/access/can/identity", // Replace with your Pages URL
-    {
-      headers: {
-        "CF-Access-Client-ID": request.headers.get("CF-Access-Client-ID"),
-        "CF-Access-Client-Secret": request.headers.get("CF-Access-Client-Secret"),
-      },
-    }
-  );
-
-  // Check if the identity request succeeded
-  if (!identityResponse.ok) {
-    return new Response("Failed to retrieve user identity", {
-      status: identityResponse.status,
-    });
-  }
-
-  // Parse and return the user identity
-  const identity = await identityResponse.json();
-  console.log(identity);
   /// Code to get the identity of the request (above)
 
   console.log(policyId);
