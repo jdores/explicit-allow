@@ -12,10 +12,10 @@ export async function onRequestPost({ params, env }) {
   const disableAccess = "";
   var newIdentity = "";
 
-  const userEmail = env.request.headers.get("cf-access-authenticated-user-email")
+  const technicianEmail = env.request.headers.get("cf-access-authenticated-user-email")
   /// Code to get the identity of the request (below)
 
-  console.log(userEmail);
+  console.log(technicianEmail);
 
   /// Code to get the identity of the request (above)
 
